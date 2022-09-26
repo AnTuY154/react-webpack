@@ -9,6 +9,10 @@ module.exports = {
     devServer: {
         port: 3010,
         watchContentBase: true,
+        compress: true,
+        historyApiFallback: true,
+        open: true,
+        overlay: true
     },
     module: {
         rules: [
@@ -26,8 +30,25 @@ module.exports = {
                     'css-loader',
                     'sass-loader',
                 ],
-            }
+            },
+            {
+                test: /\.svg$/,
+                use: ['@svgr/webpack'],
+              },
+              {
+                test: /\.(eot|otf|ttf|woff|woff2)$/,
+                loader: require.resolve("file-loader"),
+                options: {
+                  name: "static/media/[name].[hash:8].[ext]"
+                }
+              }
         ]
     },
+    resolve: {
+        extensions: [".js", ".jsx"],
+        alias: {
+            Component: path.resolve(__dirname, 'src/components/'),
+          },
+      },
     plugins: [new MiniCssExtractPlugin()],
 };
