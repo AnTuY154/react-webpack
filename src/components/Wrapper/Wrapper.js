@@ -5,8 +5,6 @@ import { selectLanguage } from "../../redux/slices/languageSlice";
 
 const Wrapper = (props) => {
   const { language } = useSelector(selectLanguage);
-
-  console.log(language);
   return (
     <IntlProvider messages={language.lang} locale={language.language}>
       {props.children}

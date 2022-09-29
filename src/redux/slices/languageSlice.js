@@ -11,11 +11,10 @@ export const languageSlice = createSlice({
   name: "language",
   initialState,
   reducers: {
-    changeLanguage: (state, action) => {
-      console.log(`i'm change to ${action.payload}`);
+    changeLanguage: () => {
+
     },
     changeLanguageSuccess: (state, action) => {
-      console.log(`i'm change to ${action.payload} success`);
       state.language = action.payload.language;
       if (action.payload.language === "en") {
         state.lang = English;

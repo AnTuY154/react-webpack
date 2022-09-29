@@ -16,5 +16,6 @@ module.exports = {
     semi: ["error", "always"],
     quotes: ["error", "double"],
     "react/prop-types": "off",
+    "no-console": "error",
   },
 };

@@ -11,12 +11,10 @@ export function Hello() {
   const handleChangeLanguage = () => {
     dispatch(
       changeLanguage({
-        language: "vn",
+        language: "vi-VN",
       })
     );
   };
-
-  console.log("123");
 
   return (
     <div>
