@@ -16,6 +16,8 @@ export function Hello() {
     );
   };
 
+  console.log("123");
+
   return (
     <div>
       <p>{language.language}</p>
