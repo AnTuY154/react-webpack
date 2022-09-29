@@ -1,17 +1,15 @@
-import React from 'react';
+import React from "react";
 
-import { Hello } from './Hello';
+import { Hello } from "./Hello";
 
 export default {
-  title: 'components/Hello',
+  title: "components/Hello",
   component: Hello,
   argTypes: {
-    backgroundColor: { control: 'color' },
+    backgroundColor: { control: "color" },
   },
 };
 
 const Template = (args) => <Hello {...args} />;
 
 export const Primary = Template.bind({});
-
-

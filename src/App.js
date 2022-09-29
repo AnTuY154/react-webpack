@@ -1,6 +1,10 @@
 import React from "react";
-import  {Hello} from "./Components/Hello";
+import { Hello } from "./Components/Hello";
 
 export function App() {
-  return <div><Hello/></div>;
+  return (
+    <div>
+      <Hello />
+    </div>
+  );
 }

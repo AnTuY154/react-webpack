@@ -1,25 +1,25 @@
-import React, { useEffect } from "react";
-import Test from "../svgFile/test.svg";
+import React from "react";
 import { selectLanguage, changeLanguage } from "../redux/slices/languageSlice";
 import { useDispatch, useSelector } from "react-redux";
-import {FormattedMessage, useIntl} from "react-intl";
+import { useIntl } from "react-intl";
 
-export function Hello(props) {
-  const  intl = useIntl();
+export function Hello() {
+  const intl = useIntl();
   const dispatch = useDispatch();
   const { language } = useSelector(selectLanguage);
 
   const handleChangeLanguage = () => {
-    dispatch(changeLanguage({
-      language: 'vn'
-    }));
-
+    dispatch(
+      changeLanguage({
+        language: "vn",
+      })
+    );
   };
 
   return (
     <div>
       <p>{language.language}</p>
-      <p>{intl.formatMessage({id: 'hello'})}</p>
+      <p>{intl.formatMessage({ id: "hello" })}</p>
       <button onClick={handleChangeLanguage}>Click me</button>
     </div>
   );
