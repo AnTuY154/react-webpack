@@ -7,6 +7,7 @@ module.exports = {
     filename: "index.bundle.js",
   },
   devServer: {
+    inline: false,
     port: 3010,
     watchContentBase: true,
     compress: true,

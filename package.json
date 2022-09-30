@@ -78,5 +78,8 @@
       "npm run lint"
     ],
     "**/*.{json,css,md}": "prettier --write ."
+  },
+  "resolutions": {
+    "webpack": "4.44.2"
   }
 }
